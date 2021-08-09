@@ -1,0 +1,191 @@
+$FONT: 'Red Hat Display', sans-serif;
+
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+html {
+    scroll-behavior: smooth;
+    min-width: 350px;
+}
+body {
+    margin: 0;
+    font-family: $FONT;
+    background-color: $Pale-blue;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#main {
+    width: 31.25%;
+    min-width: 410px;
+    max-width: 600px;
+    max-height: 750px;
+    margin: 102px auto 10px auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 30px 25px -15px #3829e02b;
+    #heading-image {
+        width: 100%;
+        img {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    #order-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 28px;
+            font-weight: 900;
+            color: $Dark-blue;
+            margin: 40px 0 0 0;
+        }
+        p {
+            font-size: 16px;
+            color: $Desaturated-blue;
+            text-align: center;
+            width: 70%;
+            line-height: 26px;
+        }
+    }
+    #annual-plan {
+        width: 68%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4px auto 0 auto;
+        padding: 24px;
+        border-radius: 7px;
+        background-color: $Very-pale-blue;
+        #annual-plan-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: -75px;
+            h2 {
+                margin: 0 0 5px 0;
+                font-size: 17px;
+                color: $Dark-blue;
+                font-weight: 700;
+            }
+            p {
+                margin: 0;
+                color: $Desaturated-blue;
+                font-size: 17px;
+            }
+        }
+        a {
+            color: hsl(246, 60%, 48%);
+            font-size: 14px;
+            font-weight: 700;
+            transition: 200ms ease-in-out;
+            &:hover {
+                text-decoration: none;
+                color: hsla(246, 60%, 48%, 0.512) ;
+            }
+        }
+    }
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 33px;
+        #payment {
+            background-color: $Bright-blue;
+            color: $Very-pale-blue;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            width: 79%;
+            border-radius: 10px;
+            height: 50px;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            box-shadow: 0px 25px 20px -5px #3829e036;
+            &:hover {
+                background-color: #766cf1;
+            }
+        }
+        a {
+            margin: 32px 0 48px 0;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            color: $Desaturated-blue;
+            transition: 200ms ease-in-out;
+            &:hover {
+                color: $Dark-blue;
+            }
+        }
+    }
+}
+
+.attribution { 
+    font-size: 16px; text-align: center; 
+    a {
+        color: hsl(228, 45%, 44%);
+        transition: 200ms linear;
+        &:hover {
+            color: hsla(228, 45%, 44%, 0.738);
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+    #main {
+        width: 88%;
+        min-width: auto;
+        margin: 70px auto 10px auto;
+        #order-summary {
+            h1 {
+                font-size: 22px;
+                margin: 28px 0 0 0;
+            }
+            p {
+                font-size: 15px;
+                width: 75%;
+            }
+        }
+        #annual-plan {
+            width: 75%;
+            padding: 10px;
+            margin: 13px auto 0 auto;
+            #annual-plan-text {
+                margin-left: -30px;
+                h2 {
+                    margin: 0px 0 2px 0;
+                    font-size: 15px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+            a {
+                font-size: 13px;
+            }
+        }
+        #buttons {
+            margin-top: 30px;
+            #payment {
+                width: 85%;
+            }
+            a {
+                margin: 25px 0 30px 0;
+            }
+        }
+    }
+    .attribution {
+        font-size: 13px;
+    }
+}
